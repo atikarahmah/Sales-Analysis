@@ -1,0 +1,81 @@
+-- =====================================
+-- DATABASE SCHEMA: Sales Analysis System
+-- Description: This schema supports an end-to-end sales data analysis system
+-- with integrated customer, order, product, and category information.
+-- A master view is created for reporting and visualization purposes.
+-- =====================================
+
+-- =====================================
+-- TABLE: Customers
+-- Description: Stores customer information including contact and location.
+-- =====================================
+CREATE TABLE Customers (
+    CustomerID SERIAL PRIMARY KEY,               -- Unique customer ID (auto-incremented)
+    FirstName VARCHAR(50),                       -- Customer's first name
+    LastName VARCHAR(50),                        -- Customer's last name
+    CustomerEmail VARCHAR(100),                  -- Email address
+    CustomerPhone VARCHAR(15),                   -- Phone number
+    CustomerAddress VARCHAR(100),                -- Street address
+    CustomerCity VARCHAR(50),                    -- City
+    CustomerState VARCHAR(50),                   -- State or province
+    CustomerZip VARCHAR(10)                      -- Postal code
+);
+
+-- =====================================
+-- TABLE: Orders
+-- Description: Stores order transactions linked to customers and products.
+-- =====================================
+CREATE TABLE Orders (
+    OrderID SERIAL PRIMARY KEY,                  -- Unique order ID (auto-incremented)
+    Date DATE NOT NULL,                          -- Order date
+    CustomerID INT NOT NULL,                     -- Foreign key to Customers table
+    ProdNumber VARCHAR(50) NOT NULL,             -- Foreign key to Products table
+    Quantity INT NOT NULL,                       -- Quantity ordered
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+-- =====================================
+-- TABLE: ProductCategory
+-- Description: Stores product categories and abbreviations.
+-- =====================================
+CREATE TABLE ProductCategory (
+    CategoryID SERIAL PRIMARY KEY,               -- Unique category ID
+    CategoryName VARCHAR(100) NOT NULL,          -- Full name of the category
+    CategoryAbbreviation VARCHAR(10) NOT NULL    -- Short code for display
+);
+
+-- =====================================
+-- TABLE: Products
+-- Description: Stores product details including name, category, and price.
+-- =====================================
+CREATE TABLE Products (
+    ProdNumber VARCHAR(50) PRIMARY KEY,          -- Unique product number/code
+    ProdName VARCHAR(255) NOT NULL,              -- Product name
+    Category INT NOT NULL,                       -- Foreign key to ProductCategory table
+    Price DECIMAL(10, 2) NOT NULL,               -- Unit price of the product
+    FOREIGN KEY (Category) REFERENCES ProductCategory(CategoryID)
+);
+
+-- =====================================
+-- VIEW: MasterData
+-- Description:
+-- Combines customers, orders, products, and category data
+-- into a single, clean structure for analysis or dashboarding.
+-- Includes total sales calculation per order.
+-- =====================================
+CREATE VIEW MasterData AS
+SELECT
+    c.CustomerEmail AS cust_email,               -- Customer's email
+    c.CustomerCity AS cust_city,                 -- Customer's city
+    o.Date AS order_date,                        -- Order date
+    o.Quantity AS order_qty,                     -- Quantity ordered
+    p.ProdName AS product_name,                  -- Product name
+    p.Price AS product_price,                    -- Unit price
+    pc.CategoryName AS category_name,            -- Product category name
+    (o.Quantity * p.Price) AS total_sales        -- Total revenue per order line
+FROM
+    Orders o
+JOIN Customers c ON o.CustomerID = c.CustomerID
+JOIN Products p ON o.ProdNumber = p.ProdNumber
+JOIN ProductCategory pc ON p.Category = pc.CategoryID
+ORDER BY o.Date ASC;
