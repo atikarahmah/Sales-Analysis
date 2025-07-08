@@ -1,5 +1,6 @@
 # Sales-Analysis
-As part of a Business Intelligence initiative, I developed a dynamic sales analysis dashboard using PostgreSQL for data querying and Power BI for visualization. The dashboard provided real-time insights into sales trends, product distribution, and business performance. It enabled stakeholders to mon
+As part of a Business Intelligence initiative, I developed a dynamic sales analysis dashboard using PostgreSQL for data querying and Power BI for visualization. The dashboard provided real-time insights into sales trends, product distribution, and business performance. It enabled stakeholders to monitor performance indicators and supported data-driven strategies to optimize distribution and sales growth.
+
 PT Sejahtera Bersama is a trading company engaged in the distribution and sale of various product categories such as Robots, Drones, Books, and more. With a wide sales coverage across multiple cities in Indonesia, the company faces several strategic challenges, including:
 1. Monitoring and evaluating sales performance effectively
 2. Optimizing product distribution across regions
