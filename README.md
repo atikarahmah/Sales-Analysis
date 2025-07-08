@@ -10,6 +10,7 @@ PT Sejahtera Bersama is a trading company engaged in the distribution and sale o
 4. Supporting data-driven business decision-making
 
 **🎯 Objective**
+
 This project was carried out as part of a Business Intelligence initiative to help the company:
 1. Monitor and evaluate sales performance across time, products, and regions
 2. Identify top-performing products and categories
@@ -33,6 +34,7 @@ An interactive dashboard was built to visualize key metrics and deliver clear bu
 3. PostgreSQL – Data joining and transformation
 
 **📂 Dataset Overview**
+
 The project uses four main datasets:
 1. Customers – Customer details (name, location, contact)
 2. Products – Product information (name, category, price)
