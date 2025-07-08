@@ -1,4 +1,4 @@
-# Project Summary – Sales Dashboard Analysis for PT Sejahtera Bersama
+# Project Summary – Sales Dashboard Analysis for PT Sejahtera Bersama 
 As part of a Business Intelligence initiative, I developed a dynamic sales analysis dashboard using PostgreSQL for data querying and Power BI for visualization. The dashboard provided real-time insights into sales trends, product distribution, and business performance. It enabled stakeholders to monitor performance indicators and supported data-driven strategies to optimize distribution and sales growth.
 
 **🔎 Problem**
