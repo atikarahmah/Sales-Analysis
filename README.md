@@ -16,6 +16,7 @@ This project was carried out as part of a Business Intelligence initiative to he
 4. Provide actionable insights to improve decision-making across departments
 
 🛠️ Solution
+
 An interactive dashboard was built to visualize key metrics and deliver clear business insights. The goal was to support data-driven strategy, enhance operational efficiency, and help the company respond quickly to changes in market dynamics. Created a centralized dashboard using tools such as Power BI, SQL, and Excel, integrating datasets from four core tables: Customers, Orders, Products, and ProductCategory.
 
 Key features include:
@@ -25,7 +26,7 @@ Key features include:
 4. Geographic Distribution of Sales
 5. Insight & Recommendation Panels
 
-🛠️ Tools & Technologies Used
+Tools & Technologies Used
 1. Power BI – Data visualization and interactive dashboard
 2. Microsoft Excel – Initial data cleaning and preparation
 3. PostgreSQL – Data joining and transformation
