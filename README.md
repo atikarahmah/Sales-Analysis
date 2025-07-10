@@ -69,21 +69,27 @@ Compares high-volume vs high-value categories for strategic focus.
 **💡 Insights & Recommendations**
 1. Total Sales
    Insight         : Sales peaked at 166.44M, with Robots as the top contributor (42.44%)
+
    Recommendation  : Focus on high-performing categories to sustain revenue
-2. Products
+3. Products
    Insight         : MCRC-23K RLX-9902 Robot was the best-selling product (15.11M)
+
    Recommendation  : Maintain stock and promote best-sellers
-3. Sales Trend
+5. Sales Trend
    Insight         : Peak in 2021 (17M), decline in 2023 (8.8M)
+
    Recommendation  : Analyze the causes and develop a recovery strategy
-4. Cities
+7. Cities
    Insight         : Washington led in both volume (289 units) and value (1.05M)
+
    Recommendation  : Increase marketing efforts in high-performing regions
-6. Books Category
+9. Books Category
    Insight         : High volume (6K units), but lower total revenue
+
    Recommendation  : Improve pricing or bundling strategy to raise value
-7. Distribution
+11. Distribution
    Insight         : Sales spread evenly but concentrated in central & eastern U.S.	
+
    Recommendation  : Expand reach in underpenetrated regions
 
 **📫 Contact**
